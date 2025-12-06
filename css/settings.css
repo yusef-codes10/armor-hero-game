@@ -8,3 +8,28 @@
     height: 300px;
     width: 500px;
 }
+
+.title {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    color: #cd2323;
+    transition: 1s;
+}
+
+.title:hover {
+    color: #a50707d0;
+}
+
+
+.play-btn {
+    display: flex;
+    justify-content: space-around;
+    margin:  20px;
+}
+
+.play-btn button {
+    border: none;
+    border-radius: 25%;
+    padding: 1.2rem;
+}
