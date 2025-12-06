@@ -1,0 +1,55 @@
+armor-hero/
+│
+├── index.html
+├── style.css
+├── main.js
+│
+├── assets/
+│   ├── sprites/
+│   │   ├── hero/
+│   │   │   ├── hero.png             # Full sprite sheet for main hero
+│   │   │   └── hero.json (optional) # Frame data (if you ever want it)
+│   │   └── enemies/
+│   │       ├── enemy1.png
+│   │       ├── enemy2.png
+│   │       └── boss.png
+│   │
+│   ├── audio/
+│   │   ├── jump.mp3
+│   │   ├── hit.mp3
+│   │   ├── bgm.mp3
+│   │   └── gameover.wav
+│   │
+│   ├── ui/
+│   │   ├── buttons.png
+│   │   └── logo.png
+│   │
+│   └── tiles/
+│       ├── grass.png
+│       ├── rock.png
+│       └── background.png
+│
+├── css/
+│   └── game.css            # Optional separation for game-specific styles
+│
+├── js/
+│   ├── engine/
+│   │   ├── renderer.js      # Draws frames on canvas
+│   │   ├── physics.js       # Gravity, collisions, movement
+│   │   └── input.js         # Keyboard controls
+│   │
+│   ├── entities/
+│   │   ├── hero.js
+│   │   ├── enemy.js
+│   │   └── projectile.js
+│   │
+│   ├── scenes/
+│   │   ├── menu.js
+│   │   ├── game.js
+│   │   └── gameover.js
+│   │
+│   └── utils/
+│       ├── loader.js        # Preloading images/audio
+│       └── math.js          # Random functions, bounding boxes
+│
+└── README.md                # Document the controls & how to run it
