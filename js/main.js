@@ -3,7 +3,7 @@ const newGameBtn = document.getElementById('newGameBtn');
 const settingsBtn = document.getElementById('settingsBtn');
 const exitBtn = document.getElementById('exitBtn');
 
-const mainMenu = document.querySelector('main-menu');
+const mainMenu = document.querySelector('.main-menu');
 
 settingsBtn.addEventListener('click', openSettingsWindow);
 
