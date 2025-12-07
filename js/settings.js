@@ -18,3 +18,5 @@ function playMainTheme() {
 function stopMainTheme() {
     mainTheme.pause();
 }
+
+// ! there are two methods, use arrow buttons to browse, or a select input
