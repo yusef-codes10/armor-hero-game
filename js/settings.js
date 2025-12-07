@@ -41,7 +41,9 @@ function palyNextTheme() {
     } else {
         currentThemeIndex = 0;
     }
-    stopMainTheme();
+    
+    // Check if the audio is playing
+    // stopMainTheme();
     currentTheme = themes[currentThemeIndex];
     console.log(currentThemeIndex);
     console.log(currentTheme);
