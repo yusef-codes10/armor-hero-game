@@ -17,16 +17,17 @@ const fightTheme = new Audio('../assets/sound/fight-theme.mp3');
 const themes = [mainTheme, fightTheme];
 console.log(themes);
 
-function playMainTheme() {
-    mainTheme.play();
+function playMainTheme(currentTheme) {
+    currentTheme.play();
 }
 
 function stopMainTheme() {
-    mainTheme.pause();
+    currentTheme.pause();
 }
 
 function palyNextTheme() {
-    currentTheme++;
+    currentThemeIndex++;
+    currentTheme = themes[currentThemeIndex];
 }
 
 // ! there are two methods, use arrow buttons to browse, or a select input
