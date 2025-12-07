@@ -14,7 +14,7 @@ function openNewGameWindow() {
 
 function openSettingsWindow() {
     mainMenu.classList.toggle('hidden');
-    settingsMenu.classList.toggle('hidden');
+    settingsMenu.classList.toggle('hidden');c
 }
 
 function openExitWindow() {

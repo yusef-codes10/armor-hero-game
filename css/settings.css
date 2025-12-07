@@ -7,6 +7,20 @@
 
     height: 300px;
     width: 500px;
+    position: relative;
+}
+
+.settings-menu i {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 1.22rem;
+    transition: .5s;
+}
+
+.settings-menu i:hover {
+    color: #cd2323;
 }
 
 .title {
