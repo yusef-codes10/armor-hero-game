@@ -3,11 +3,9 @@ const playBtn = document.getElementById('playBtn');
 const stopBtn = document.getElementById('stopBtn');
 const nextBtn = document.getElementById('nextBtn');
 
-let currentTheme = null; // a var to hold the music to play
-let currentThemeIndex = 0;
-
 playBtn.addEventListener('click', playMainTheme);
 stopBtn.addEventListener('click', stopMainTheme);
+nextBtn.addEventListener('click', palyNextTheme);
 
 // music player is here
 const mainTheme = new Audio('../assets/sound/main-theme.mp3');
@@ -17,17 +15,25 @@ const fightTheme = new Audio('../assets/sound/fight-theme.mp3');
 const themes = [mainTheme, fightTheme];
 console.log(themes);
 
+let currentTheme = themes[0]; // a var to hold the music to play
+let currentThemeIndex = 0;
+console.log(currentTheme);
+
 function playMainTheme(currentTheme) {
     currentTheme.play();
 }
 
-function stopMainTheme() {
+function stopMainTheme(currentTheme) {
     currentTheme.pause();
 }
 
 function palyNextTheme() {
+    // ! have to secure getting out of bounds
     currentThemeIndex++;
     currentTheme = themes[currentThemeIndex];
+    console.log(currentThemeIndex);
+    console.log(currentTheme);
+    playMainTheme(currentTheme);
 }
 
 // ! there are two methods, use arrow buttons to browse, or a select input
