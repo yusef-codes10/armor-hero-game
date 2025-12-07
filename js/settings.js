@@ -2,6 +2,8 @@ console.log('settings loaded');
 const playBtn = document.getElementById('playBtn');
 const stopBtn = document.getElementById('stopBtn');
 
+let currentTheme = null; // a var to hold the music to play
+
 playBtn.addEventListener('click', playMainTheme);
 stopBtn.addEventListener('click', stopMainTheme);
 
