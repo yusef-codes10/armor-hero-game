@@ -20,6 +20,10 @@ let currentThemeIndex = 0;
 console.log(currentTheme);
 
 function playMainTheme() {
+    // we have to assign here to
+    if (currentTheme === undefined) {
+        currentTheme = themes[0];
+    }
     currentTheme.play();
 }
 
@@ -31,8 +35,9 @@ function palyNextTheme() {
     // ! have to secure getting out of bounds
     if (currentThemeIndex >= themes.length) {
         currentThemeIndex = 0;
+    } else {
+        currentThemeIndex++; // jumps to far 
     }
-    currentThemeIndex++;
     currentTheme = themes[currentThemeIndex];
     console.log(currentThemeIndex);
     console.log(currentTheme);
