@@ -15,25 +15,30 @@ const fightTheme = new Audio('../assets/sound/fight-theme.mp3');
 const themes = [mainTheme, fightTheme];
 console.log(themes);
 
-let currentTheme = themes[0]; // a var to hold the music to play
+let currentTheme; // a var to hold the music to play
 let currentThemeIndex = 0;
 console.log(currentTheme);
 
-function playMainTheme(currentTheme) {
+function playMainTheme() {
     currentTheme.play();
 }
 
-function stopMainTheme(currentTheme) {
+function stopMainTheme() {
     currentTheme.pause();
 }
 
 function palyNextTheme() {
     // ! have to secure getting out of bounds
+    if (currentThemeIndex >= themes.length) {
+        currentThemeIndex = 0;
+    }
     currentThemeIndex++;
     currentTheme = themes[currentThemeIndex];
     console.log(currentThemeIndex);
     console.log(currentTheme);
-    playMainTheme(currentTheme);
+    playMainTheme();
 }
+
+console.log(currentTheme);
 
 // ! there are two methods, use arrow buttons to browse, or a select input
