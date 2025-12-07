@@ -19,9 +19,9 @@ let currentTheme; // a var to hold the music to play
 let currentThemeIndex = 0;
 console.log(currentTheme);
 
-function playMainTheme() {
+function playMainTheme() {  // fix: different args name or not at all
     // we have to assign here to
-    if (currentTheme === undefined) {
+    if (currentTheme === undefined) {  //fix: check if it's not defiend first
         currentTheme = themes[0];
     }
     currentTheme.play();
@@ -36,7 +36,7 @@ function palyNextTheme() {
     if (currentThemeIndex >= themes.length) {
         currentThemeIndex = 0;
     } else {
-        currentThemeIndex++; // jumps to far 
+        currentThemeIndex++; // fix jumping too far
     }
     currentTheme = themes[currentThemeIndex];
     console.log(currentThemeIndex);
