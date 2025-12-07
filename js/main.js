@@ -5,8 +5,10 @@ const exitBtn = document.getElementById('exitBtn');
 
 const mainMenu = document.querySelector('.main-menu');
 const settingsMenu = document.querySelector('.settings-menu');
+const xIcon  = document.getElementById('xIcon');
 
 settingsBtn.addEventListener('click', openSettingsWindow);
+xIcon.addEventListener('click', openSettingsWindow);
 
 function openNewGameWindow() {
     
@@ -14,7 +16,7 @@ function openNewGameWindow() {
 
 function openSettingsWindow() {
     mainMenu.classList.toggle('hidden');
-    settingsMenu.classList.toggle('hidden');c
+    settingsMenu.classList.toggle('hidden');
 }
 
 function openExitWindow() {
