@@ -2,6 +2,7 @@ console.log('settings loaded');
 const playBtn = document.getElementById('playBtn');
 const stopBtn = document.getElementById('stopBtn');
 const nextBtn = document.getElementById('nextBtn');
+const currentThemeHeader = document.getElementById('currentThemeHeader');
 
 playBtn.addEventListener('click', playMainTheme);
 stopBtn.addEventListener('click', stopMainTheme);
@@ -25,6 +26,7 @@ function playMainTheme() {  // fix: different args name or not at all
     if (currentTheme === undefined) {  //fix: check if it's not defiend first
         currentTheme = themes[0];
     }
+    currentThemeHeader.textContent = currentTheme.src.split("/").pop();
     currentTheme.play();
 }
 
@@ -34,10 +36,10 @@ function stopMainTheme() {
 
 function palyNextTheme() {
     // ! have to secure getting out of bounds
-    if (currentIndex < themes.length - 1) { // bset logic, cuz you will still be incrementing too far when the index is in range but less then the themes length
-        currentIndex++;
+    if (currentThemeIndex < themes.length - 1) { // bset logic, cuz you will still be incrementing too far when the index is in range but less then the themes length
+        currentThemeIndex++;
     } else {
-        currentIndex = 0;
+        currentThemeIndex = 0;
     }
     stopMainTheme();
     currentTheme = themes[currentThemeIndex];
